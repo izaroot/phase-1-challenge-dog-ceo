@@ -25,22 +25,20 @@ document.addEventListener("DOMContentLoaded", function(){
             dogBreeds.append(blankLi)
             blankLi.addEventListener('click', function(){
                 blankLi.style.color = "red"
+                // console.log(dogArray[0])
+            })
             breedDropdown.addEventListener('change', function(evt) {
                 let breedName = blankLi.innerText
-                console.log(breedName)
                 let firstLetter = breedName.substring(0,1)
-                console.log(firstLetter)
                 let dropdownLetter = evt.target.value
                 if (firstLetter !== `${dropdownLetter}`) {
                     return blankLi.style.display = "none"
                 } else if (firstLetter === `${dropdownLetter}`){
-                    return blankLi.style.display = "block"
+                    return blankLi.style.display = ""
                 }
             // })    
             // })
         });
-        // console.log(dogArray[0])
-    })
 })
 
 })
